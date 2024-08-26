@@ -1,0 +1,464 @@
+/* CSS Fixo */
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8e8e8;
+}
+
+/*INÍCIO DO HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: linear-gradient(135deg, #6b73ff, #000dff); /* Gradiente de fundo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Adicionado para controlar o z-index */
+    z-index: 1; /* Garante que o header fique abaixo da barra lateral */
+}
+
+.logo img {
+    height: 100px; /* Ajuste conforme necessário */
+}
+
+nav.categories ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.categories ul li {
+    margin: 0 15px;
+}
+
+nav.categories ul li a {
+    text-decoration: none;
+    color: #fff; /* Ajuste a cor do texto das categorias */
+    font-weight: bold;
+    padding: 10px 0; /* Ajuste o padding para aumentar a altura */
+    transition: border-bottom 0.3s, color 0.3s; /* Adiciona transição para a cor do texto */
+    position: relative;
+}
+
+nav.categories ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 6px; /* Aumenta a espessura da linha */
+    background-color: #00e5ff5e; /* Cor da linha */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav.categories ul li a:hover::after, nav.categories ul li a.active::after {
+    width: 100%;
+}
+
+nav.categories ul li a:hover, nav.categories ul li a.active {
+    color: #707273; /* Nova cor do texto no estado hover e ativo */
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.profile-menu a {
+    text-decoration: none;
+    color: #000; /* Mudando a cor para preto */
+    font-size: 30px; /* Ajustando o tamanho do ícone */
+    font-weight: bold;
+}
+
+.profile-menu a:hover {
+    color: #11998e; /* Mudando a cor ao passar o mouse */
+}
+
+.menu-icon {
+    margin-left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+.menu-icon:hover {
+    color: #11998e;
+}
+/*FIM DO HEADER*/
+
+
+
+/* Estilos para a barra lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #666161, #5a5858);
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+    padding-top: 130px;
+    font-family: 'Margarine', sans-serif;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.sidebar a img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.sidebar a:not(.closebtn):not(:last-child) {
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar a:not(.closebtn):hover, .sidebar a.selected {
+    background-color: #9e9999;
+    color: #031c07;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar li {
+    border-top: 1px solid #fff;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 70px; /* Ajuste o tamanho do ícone conforme necessário */
+    color: #fff;
+    cursor: pointer;
+    padding: 0px;
+    transition: transform 0.3s ease;
+}
+
+.subcategory {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    position: relative; /* Importante para controlar o z-index */
+}
+
+.subcategory.visible {
+    max-height: 200px; /* Ajuste conforme necessário */
+    overflow-y: auto; /* Adicione scroll quando necessário */
+    z-index: 10; /* Garante que as subcategorias visíveis estejam acima das outras */
+}
+
+.subcategory li {
+    margin-top: 5px;
+}
+
+.subcategory a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+.subcategory a:hover {
+    background-color: #666;
+}
+/*FIM DA BARRA LATERAL*/
+
+
+/*iNÍCIO TITULO CENTRALIZADO*/
+.titulo-centralizado {
+    text-align: center;
+    margin-top: 50px; /* Ajuste conforme necessário */
+}
+
+.titulo-centralizado h1 {
+    font-family: 'Archivo Black', sans-serif; /* Usando a fonte Arquivo Black */
+    font-size: 2.5em; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #333; /* Cor do texto */
+}
+/*FIM TITULO CENTRALIZADO*/
+
+
+
+
+
+
+/*INÍCIO CAIXA DE AVISO*/
+.aviso {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aviso-titulo {
+    color: rgb(67, 168, 20);
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.aviso p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.aviso ul {
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.aviso ul.itens-principais,
+.aviso ul.itens-adicionais {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.aviso ul.itens-principais li,
+.aviso ul.itens-adicionais li {
+    margin-bottom: 10px;
+}
+
+.aviso a.botao {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.aviso a.botao:hover {
+    background-color: #0056b3;
+}
+
+.aviso .itens-adicionais {
+    display: none;
+}
+
+.aviso.visivel .itens-adicionais {
+    display: block;
+}
+/*FIM CAIXA DE AVISO*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*INÍCIO DO FORMULÁRIO*/
+.container {
+    background: linear-gradient(135deg, #829f9a, #cdcfd0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(253, 253, 253, 0.663);
+    width: 80%; /* Define a largura do container */
+    max-width: 1200px; /* Define uma largura máxima para o container */
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px; /* Ajuste o valor conforme necessário para o espaçamento desejado */
+}
+
+.container h2 {
+    color: #036106;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #6f6666;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #cdcfd015;
+}
+
+.form-group .btn {
+    background: linear-gradient(135deg, #4CAF50, #6bd87098);
+    color: #fff;
+    padding: 15px 40px;
+    /* Ajuste o padding conforme necessário */
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 100%;
+    /* Ocupa toda a largura do seu contêiner */
+    max-width: 580px;
+    /* Limita a largura máxima conforme necessário */
+    margin: 20px auto 0;
+    /* Adicionado margem superior para espaçamento */
+    display: block;
+    /* Garante que o botão seja exibido como bloco */
+}
+
+.form-group .btn:hover {
+    background: linear-gradient(135deg, #45a049, #5f8e61);
+}
+
+.form-group span {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.form-group span a {
+    color: #036106;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.form-group span a:hover {
+    text-decoration: underline;
+}
+/*FIM DO FORMULÁRIO*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RODAPÉ*/
+.footer {
+    background: linear-gradient(135deg, #6b73ff, #000dff); /* Gradiente de fundo */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Centralizar texto */
+    padding: 15px 0; /* Padding superior e inferior */
+    width: 100%; /* Largura total */
+    clip-path: ellipse(75% 100% at 50% 100%); /* Borda curvada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Importante para posicionar o footer-bottom */
+}
+
+.footer-content {
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Colocar as seções em coluna */
+    align-items: center; /* Centralizar seções */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centralizar */
+    padding: 0 20px; /* Padding lateral */
+}
+
+.footer-section {
+    padding: 10px; /* Padding interno */
+}
+
+.footer-section h2 {
+    font-size: 1.5em; /* Tamanho da fonte */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.footer-section p {
+    font-size: 1em; /* Tamanho da fonte */
+    margin-bottom: 5px; /* Espaçamento inferior */
+}
+
+.social-icons img {
+    width: 30px; /* Largura das imagens */
+    margin: 0 8px; /* Espaçamento entre as imagens */
+}
+
+.footer-section.about {
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.footer-bottom {
+    background: #000dff; /* Fundo diferente para a parte inferior */
+    padding: 8px 0; /* Padding superior e inferior */
+    width: 100%; /* Largura total */
+    position: absolute; /* Fixado no final do rodapé */
+    bottom: 0; /* Fixado na parte inferior */
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0; /* Remover margem */
+    font-size: 0.9em; /* Tamanho da fonte */
+}
+/*FIM DO RODAPÉ*/

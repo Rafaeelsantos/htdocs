@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6b73ff, #000dff); /* Gradiente de fundo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Usa toda a altura da viewport */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Adiciona um espaçamento interno para evitar que o conteúdo fique colado às bordas */
+    font-family: 'Poppins', sans-serif; /* Define a fonte para todo o documento */
+}
+
+
+
+#form-login {
+  display: none; /* Estilos adicionais para ocultar o formulário de login inicialmente */
+}
+
+
+.container {
+    background: linear-gradient(135deg, #829f9a, #cdcfd0); /* Degradê de cores */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(253, 253, 253, 0.663);
+    max-width: 600px; /* Largura máxima do container */
+    width: 100%; /* Para garantir responsividade */
+    text-align: center; /* Alinha conteúdo interno no centro */
+    margin: auto; /* Centraliza o container na página */
+}
+
+.container h2 {
+    color: #036106; /* Cor verde */
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém proporção */
+    margin-bottom: 20px; /* Espaçamento inferior opcional */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Alinha os rótulos à esquerda */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: calc(100% - 20px); /* Ajusta a largura para o conteúdo interno */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #6f6666;
+    border-radius: 10px; /* Ajusta o raio da borda para torná-la mais arredondada */
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+    background-color: #cdcfd015; /* Nova cor de fundo para os inputs */
+}
+
+.form-group .btn {
+    background: linear-gradient(135deg, #4CAF50, #6bd87098); /* Degrade de cores */
+    color: #fff;
+    padding: 12px 40px; /* Ajuste o padding conforme necessário para aumentar a largura */
+    border: none;
+    cursor: pointer;
+    border-radius: 20px; /* Arredonda as bordas do botão */
+    font-size: 16px;
+    width: 100%; /* Ocupa toda a largura do seu contêiner */
+    max-width: 550px; /* Ajusta conforme necessário */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto do botão */
+}
+
+.form-group .btn:hover {
+    background: linear-gradient(135deg, #45a049, #5f8e61); /* Nova cor no hover */
+}
+
+.form-group span {
+    display: block;
+    text-align: left;
+    margin-top: 10px; /* Espaçamento superior */
+    color: #333;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.form-group span a {
+    color: #036106;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.form-group span a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a caixa de mensagem */
+.caixa-mensagem {
+    display: none;
+    position: fixed;
+    top: 0; /* Posição no topo */
+    left: 0;
+    width: 100%; /* Largura total */
+    padding: 10px;
+    background-color: #f44336; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centralizar texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 9999; /* Z-index alto para estar acima de outros elementos */
+  }
+
+  .caixa-mensagem.sucesso {
+    background-color: #4CAF50; /* Cor de fundo para sucesso */
+  }
+
+  .caixa-mensagem.show {
+    display: block; /* Mostrar a caixa de mensagem */
+  }

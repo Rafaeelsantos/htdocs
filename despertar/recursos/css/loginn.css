@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte Roboto com fallback para fontes sans-serif */
+}
+
+.header-1 {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    flex: 1;
+    margin-left: -80px; /* Move a logo para a esquerda*/
+}
+
+.nav-title {
+    flex: 2;
+    text-align: center;
+}
+
+.nav-title h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.icon-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: -90px; /* Move os icones para a esquerda*/
+}
+
+.icon {
+    margin-left: 20px;
+}
+
+.icon a {
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.icon a:hover, a:hover {
+    color: #007bff;
+}
+
+
+
+
+.header-2 {
+    background-color: #EDEAE5;
+    box-shadow: 0px 3px 4px #464646;
+}
+
+.nav-bar-2 {
+    padding: 1rem 2rem;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 100px;
+}
+
+.nav-item a:hover {
+    color: #230584;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #996161;
+    font-family: 'Poppins';
+}
+
+
+
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 70px); /* Adjust this value based on the height of the header */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+.form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-header img {
+    margin-right: 10px; /* Espaço entre o ícone e o título */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 20px; /* Tamanho do título do formulário */
+    margin: 0; /* Remover margem padrão do título */
+}
+
+.form-group {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-link {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Adiciona margem no topo */
+}
+
+.register-button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 8px; /* Adiciona margem no topo do botão */
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+}

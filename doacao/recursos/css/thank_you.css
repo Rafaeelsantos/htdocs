@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-padrao: #3bffbe;
+    --cor-padrao-hover: #f3b2e5;
+    --cor-fonte: #070707;
+    --cor-font-p: #555;
+    --cor-btn: #a51717;
+    --cor-btn-hover: #15ff00;
+    --cor-btn-fonte: #000;
+    --cor-fonte-corpo: #555;
+    --cor-font-corpo-leve: #777;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.header-1 {
+    background-color: #af4c4c; /* Cor de fundo do header */
+    padding: 30px 0; /* Espaçamento interno */
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100px; /* Altura do header */
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px;
+}
+
+.logo {
+    height: 300px; /* Ajuste a altura conforme necessário */
+}
+
+.centered-text {
+    flex: 1;
+    text-align: center;
+}
+
+.centered-text h1 {
+    color: white; /*Cor do texto*/
+    text-align: center;
+    font-size: 36px; /* Tamanho do texto */
+
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.rodape {
+    background: var(--cor-btn-fonte);
+    color: var(--cor-font-corpo-leve);
+    padding: 60px 0 20px;
+    font-size: 14px;
+}
+
+.rodape p {
+    color: var(--cor-font-corpo-leve);
+}
+
+.rodape h3 {
+    color: var(--cor-font-corpo-leve);
+    margin-bottom: 20px;
+}
+
+.rodape-col-1,
+.rodape-col-2,
+.rodape-col-3,
+.rodape-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-1 {
+    flex-basis: 30%;
+
+}
+
+.rodape-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.rodape-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-3,
+.rodape-col-4 {
+    flex-basis: 12%;
+    text-align: right;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.rodape hr {
+    border: none;
+    height: 1px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.direitos {
+    text-align: center;
+}
+
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.confetti-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca as imagens de confetes atrás do conteúdo principal */
+}
+
+.confetti-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thank-you {
+    width: 1000px; /* Largura da caixa de mensagem */
+    max-width: 8000px; /* Largura máxima da caixa de mensagem */
+    margin: auto;
+    padding: 40px; /* Aumentei o padding para dar mais espaço interno */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 6);
+    text-align: center;
+}
+
+.thank-you h2 {
+    font-size: 28px; /* Aumentei o tamanho da fonte do título */
+    margin-bottom: 20px; /* Aumentei o espaçamento inferior do título */
+    color: #333; /* Cor do texto */
+}
+
+.thank-you p {
+    font-size: 20px; /* Aumentei o tamanho da fonte do texto */
+    line-height: 1.5; /* Aumentei o espaçamento entre linhas */
+    color: #666; /* Cor do texto */
+}
